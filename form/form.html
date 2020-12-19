@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />  
+    <meta charset="utf-8" />
     <title>Form</title>
 </head>
 <body>
@@ -11,39 +11,50 @@
 
             <p>What means JS?</p>
 
-            <ul>                
+            <ul>
                 <li>
-                    <input id='answer1' type='checkbox'/>
-                    <label for='answer1'>Java Script</label>                   
+                    <!-- Ещё можно заворачивать инпуты в лейблы и тогда они будут работать без привязки id->for -->
+                    <label><input type='checkbox'/> Java Script</label>
+                    <!-- В html для атрибутов принято использовать двойные кавычки -->
                 </li>
                 <li>
+                    <!-- Название id лучше давать более осознанно: jack-sparrow-answer звучит лучше, чем answer2 -->
                     <input id='answer2' type='checkbox'/>
                     <label for='answer2'>Jack Sparrow</label>
                 </li>
                 <li>
                     <label for='answer3'>I don't know exactly, but I will put the text here...</label>
                     <input id='answer3' type='text' placeholder='Homer J. Simpson'/>
-                </li>                
+                </li>
             </ul>
 
             <label for='photo'>Please upload your photo:</label>
             <input id='photo' type='file'/>
-            
+
             <p>
                 <label for='password'>See my password here:</label>
                 <input id='password' type='password'/>
             </p>
 
-            <p>Do you like the form? 
+            <p>Do you like the form?
                 <label for='yes'>Yes</label>
                 <input id='yes' type='radio' name='like'/>
 
                 <label for='no'>No</label>
                 <input id='no' type='radio' name='like'/>
             </p>
-            <input type='something'/> 
+            <!-- type="something" нет такого типа -->
+            <input type='something'/>
             <p><textarea placeholder='type here...'></textarea></p>
             <p>
+                <!-- Не хватает select без multiple - это обычный выпадающий список. multiple значит, что можно выбрать несколько значений -->
+                <select>
+                    <option disabled>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                    <option selected>Option 4</option>
+                    <option>Option 5</option>
+                </select>
                 <select multiple>
                     <option disabled>Option 1</option>
                     <option>Option 2</option>
@@ -70,3 +81,4 @@
     <a href='../nav/nav.html'>Nav</a>
 </body>
 </html>
+<!-- Почитать про ещё полезные аттрибуты у формы: autocomplete, autofocus, checked, disabled, name, readonly, required, value -->
