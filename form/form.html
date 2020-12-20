@@ -13,17 +13,13 @@
 
             <ul>
                 <li>
-                    <!-- Ещё можно заворачивать инпуты в лейблы и тогда они будут работать без привязки id->for -->
                     <!--Да, читал про это в WebRef. Так меньше писать кода, а бывают моменты, когда лучше не заворачивать?-->
+                    <!-- зависит от вёрстки -->
                     <label><input type="checkbox"/> Java Script</label>
-                    <!-- В html для атрибутов принято использовать двойные кавычки -->
-                    <!--Поменял-->
                 </li>
                 <li>
-                    <!-- Название id лучше давать более осознанно: jack-sparrow-answer звучит лучше, чем answer2 -->
-                    <!--Поменял. Еще нужно менять for, чтобы при нажатии на текст выделялся чек-бокс-->
                     <input id="jack-sparrow-answer" type="checkbox"/>
-                    <label for='jack-sparrow-answer'>Jack Sparrow</label>
+                    <label for='jack-sparrow-answer'>Jack Sparrow</label> <!-- TODO: одинарные кавычки -->
                 </li>
                 <li>
                     <label for="answer3">I don't know exactly, but I will put the text here...</label>
@@ -46,13 +42,11 @@
                 <label for="no">No</label>
                 <input id="no" type="radio" name="like"/>
             </p>
-            <!-- type="something" нет такого типа -->
             <!--Да, такого типа нет. Посмотрел в форме-задании и понял что любой текст в типе приводит к "text" -->
+            <!-- TODO: значит нужно убрать этот тип -->
             <input type="something"/>
             <p><textarea placeholder="type here..."></textarea></p>
             <p>
-                <!-- Не хватает select без multiple - это обычный выпадающий список. multiple значит, что можно выбрать несколько значений -->
-                <!--Да, просто select это выпадающий список-->
                 <select>
                     <option disabled>Option 1</option>
                     <option>Option 2</option>
@@ -81,9 +75,8 @@
             </dl>
         </fieldset>
     </form>
-    <a href='../index.html'>Домой</a>
-    <a href='../table/table.html'>Таблица</a>
-    <a href='../nav/nav.html'>Nav</a>
+    <a href='../index.html'>Домой</a> <!-- TODO: одинарные кавычки -->
+    <a href='../table/table.html'>Таблица</a> <!-- TODO: одинарные кавычки -->
+    <a href='../nav/nav.html'>Nav</a> <!-- TODO: одинарные кавычки -->
 </body>
 </html>
-<!-- Почитать про ещё полезные аттрибуты у формы: autocomplete, autofocus, checked, disabled, name, readonly, required, value -->
