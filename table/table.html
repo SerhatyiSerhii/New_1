@@ -6,7 +6,15 @@
 </head>
 <body>
     <!-- border - устаревший аттрибут, для этих целей используют css -->
-    <table border='1px solid black' style='border-collapse: collapse'>
+    <!--Подправил через style. Firefox почему-то не отображает границы-->
+    <style>
+        table,        
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <table>
         <caption>Что есть в шкафчике?</caption>
         <thead>
             <tr>
@@ -15,12 +23,13 @@
         </thead>
         <tbody>
             <!-- здесь что-то совсем сломано: 2 открывающих colgroup, но только один закрывающий -->
-            <colgroup width='250'>
+            <!--WebRef пишет и показывает пример, что закрывающий тег не обязателен, а нужет если в group входит несколько col-->
+            <colgroup width='250'></colgroup>
                 <colgroup span='2' width='125'>
                     <col>
                     <col>
                 </colgroup>
-            <tr>
+            <tr style="border: 1px solid black" style="border-collapse: collapse;">
                 <td>Сахар</td>
                 <td>1 кг</td>
                 <td>Открыт</td>
@@ -40,7 +49,8 @@
             <tr>
                 <td>Всего веса на полке</td>
                 <!-- align - устаревший аттрибут, для этих целей используют css -->
-                <td colspan="2" align='center'>3 кг</td>
+                <!--Исправил-->
+                <td colspan="2" style="text-align:center">3 кг</td>
             </tr>
         </tfoot>
     </table>

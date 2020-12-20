@@ -14,40 +14,45 @@
             <ul>
                 <li>
                     <!-- Ещё можно заворачивать инпуты в лейблы и тогда они будут работать без привязки id->for -->
-                    <label><input type='checkbox'/> Java Script</label>
+                    <!--Да, читал про это в WebRef. Так меньше писать кода, а бывают моменты, когда лучше не заворачивать?-->
+                    <label><input type="checkbox"/> Java Script</label>
                     <!-- В html для атрибутов принято использовать двойные кавычки -->
+                    <!--Поменял-->
                 </li>
                 <li>
                     <!-- Название id лучше давать более осознанно: jack-sparrow-answer звучит лучше, чем answer2 -->
-                    <input id='answer2' type='checkbox'/>
-                    <label for='answer2'>Jack Sparrow</label>
+                    <!--Поменял. Еще нужно менять for, чтобы при нажатии на текст выделялся чек-бокс-->
+                    <input id="jack-sparrow-answer" type="checkbox"/>
+                    <label for='jack-sparrow-answer'>Jack Sparrow</label>
                 </li>
                 <li>
-                    <label for='answer3'>I don't know exactly, but I will put the text here...</label>
-                    <input id='answer3' type='text' placeholder='Homer J. Simpson'/>
+                    <label for="answer3">I don't know exactly, but I will put the text here...</label>
+                    <input id="answer3" type="text" placeholder="Homer J. Simpson"/>
                 </li>
             </ul>
 
-            <label for='photo'>Please upload your photo:</label>
-            <input id='photo' type='file'/>
+            <label for="photo">Please upload your photo:</label>
+            <input id="photo" type="file"/>
 
             <p>
-                <label for='password'>See my password here:</label>
-                <input id='password' type='password'/>
+                <label for="password">See my password here:</label>
+                <input id="password" type="password"/>
             </p>
 
             <p>Do you like the form?
-                <label for='yes'>Yes</label>
-                <input id='yes' type='radio' name='like'/>
+                <label for="yes">Yes</label>
+                <input id="yes" type="radio" name="like"/>
 
-                <label for='no'>No</label>
-                <input id='no' type='radio' name='like'/>
+                <label for="no">No</label>
+                <input id="no" type="radio" name="like"/>
             </p>
             <!-- type="something" нет такого типа -->
-            <input type='something'/>
-            <p><textarea placeholder='type here...'></textarea></p>
+            <!--Да, такого типа нет. Посмотрел в форме-задании и понял что любой текст в типе приводит к "text" -->
+            <input type="something"/>
+            <p><textarea placeholder="type here..."></textarea></p>
             <p>
                 <!-- Не хватает select без multiple - это обычный выпадающий список. multiple значит, что можно выбрать несколько значений -->
+                <!--Да, просто select это выпадающий список-->
                 <select>
                     <option disabled>Option 1</option>
                     <option>Option 2</option>
@@ -64,7 +69,7 @@
                 </select>
             </p>
             <p>
-                <input type='submit' value='Submit'/>
+                <input type="submit" value="Submit"/>
                 <button>Кнопка</button>
             </p>
         </fieldset>
